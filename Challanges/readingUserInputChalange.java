@@ -2,7 +2,7 @@ package com.timbuchalka;
 import java.util.Scanner;
 
 public class Main {
-    
+
     /* -Read 10 numbers from the console entered by the user and print the sum of those numbers.
 -Create a Scanner like we did in the previous video.
 -Use the hasNextInt() method from the scanner to check if the user has entered an int value.
@@ -22,21 +22,20 @@ Hint:
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 10 numbers that u would like to know sum of them.");
         System.out.println("Time to input nr. 1");
-        boolean hasNextInt = scanner.hasNextInt();
 
+        boolean hasNextInt = scanner.hasNextInt();
         if(hasNextInt){
 
             int count = 1;
             int sum = 0;
-    
-            // this while loop offer me 10 times to introduce new int from new line
-            while (count < 10){
-            count++; //repeat action 10 times
-            int number = scanner.nextInt();// way of introducing number
-            scanner.nextLine();//one more line
-            
-            System.out.println("You entered number " +number+ ". Is time to introduce nr." + count);
 
+            // this while loop offer me 10 times to introduce new int from new line
+            while (count < 11){
+
+            int number = scanner.nextInt();// way of introducing number
+                System.out.println("You entered number " +number+ ". Is time to introduce nr." + count);
+
+            count++; //repeat action 10 times
             sum += number; // calculating summ of introduced numbers
             System.out.println("Step 2:  " +sum+ " and " + count); // for my understanding what's going around
             }
@@ -46,7 +45,10 @@ Hint:
         }else{
             System.out.println("Invalid Number");
         }
+        scanner.nextLine();//one more line
+
+        scanner.close();
 
     }
-    
+
 }
