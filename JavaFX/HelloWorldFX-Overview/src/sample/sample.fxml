@@ -1,0 +1,17 @@
+<!-- FXML is a flavor of XML.
+ GridPane is one of the JavaFX layouts
+ The FX colon Controller atribute tells the runtime which class is the controller for this window. We can see there's package name and .class
+ name so sample being the package name controller being our controller class.
+ The GridPane doesn't have any child elements and so when we run the application, the window will be empty-->
+
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+</GridPane>
+
